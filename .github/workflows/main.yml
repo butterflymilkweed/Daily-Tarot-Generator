@@ -7,12 +7,26 @@ body {
   padding: 1em;
 }
 
+position: fixed;
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  grid-gap: 10px;
+  grid-gap: 5px;
+  
 }
+
+
 
 .item-a {
   grid-column: 2 / 3;
@@ -25,7 +39,7 @@ body {
   grid-row: 2 / 3;
   justify-self: center;
   text-align: center;
-  font: 12px Courier, sans-serif;
+  font: 14px, Courier New;
 
 }
 
@@ -33,23 +47,27 @@ body {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
   justify-self: center;
+  text-align: center;
 
 }
 
+
 button {
-  background-color: #F4DBED;
+    
+  position: static; 
+  background-color:  #32b1a9; 
   border: none;
   padding: 0.7em;
-  color: gray;
-  display: block;
-  font: 12px Courier, sans-serif;
+  color: #fadcd1;
+  display: inline-block;
+  font: 14px Courier New;
 
   -webkit-transition: 0.5s;
 
 }
 
 button:hover {
-  background-color: pink;   
+  background-color: #a58caf;   
   -webkit-transition: 0.5s;
 
 }
@@ -72,19 +90,28 @@ button:hover {
 
 <div class="container">
 <div class="item-a">
+<div class="item-b">
+    </body>
+    </head>
   
-  <img id="face" src="https://media.giphy.com/media/lO8sVTtKic9rw12BQ3/giphy.gif">
+  <img id="face" src="https://i.ibb.co/bLfPRWG/Modern-Witch-Tarot-Deck-by-Lisa-Sterle.jpg">
   
   </div>
   
 <div id="card" class="item-b">
   <p></p>
   </div>
+  
+  
 
- <button type="button" id="button" class="button" onclick="buttonClick()">   today's draw 	</button>
-
+<div style="text-align:center">
+    <button style="height:40px; width:150px;"
+ <button type="button" id="button" class="button" onclick="buttonClick()">   <b>today's draw</b>	</button>
+<p></p>
+<div style="text-align:center">
+    <button style="height:40px; width:150px;"
   <button onclick=location.reload();
->  reset deck &#x263e;	
+>  <b>reset deck</b>	
 </button>
 
 
@@ -101,185 +128,237 @@ var cards =
 [
   {card: "The Fool",
 desc: "a fresh start",
-src: "https://upload.wikimedia.org/wikipedia/en/9/90/RWS_Tarot_00_Fool.jpg"},
+src: "https://live.staticflickr.com/65535/51704029507_a6a9f18453_m.jpg"},
 {card: "The Magician",
 desc: "pure energy",
-src: "https://upload.wikimedia.org/wikipedia/en/d/de/RWS_Tarot_01_Magician.jpg"},
+src: "https://live.staticflickr.com/65535/51704822971_b6d36cc38d_m.jpg"},
 {card: "The High Priestess",
 desc: "intuition",
-src: "https://upload.wikimedia.org/wikipedia/en/8/88/RWS_Tarot_02_High_Priestess.jpg"},
+src: "https://live.staticflickr.com/65535/51705718425_744e718cf6_m.jpg"},
 {card: "The Empress",
 desc: "fertility",
-src: "https://upload.wikimedia.org/wikipedia/en/d/d2/RWS_Tarot_03_Empress.jpg"},
+src: "https://live.staticflickr.com/65535/51705718780_f8398d9b1a_m.jpg"},
 {card: "The Emperor",
 desc: "power",
-src: "https://upload.wikimedia.org/wikipedia/en/c/c3/RWS_Tarot_04_Emperor.jpg"},
+src: "https://live.staticflickr.com/65535/51705504554_32e8a79c15_m.jpg"},
 {card: "The Hierophant",
 desc: "tradition",
-src: "https://upload.wikimedia.org/wikipedia/en/8/8d/RWS_Tarot_05_Hierophant.jpg"},
+src: "https://live.staticflickr.com/65535/51705504604_2b8a3bf08f_m.jpg"},
 {card: "The Lovers",
 desc: "harmony",
-src: "https://upload.wikimedia.org/wikipedia/en/d/db/RWS_Tarot_06_Lovers.jpg"},
+src: "https://live.staticflickr.com/65535/51705503989_750fd49775_m.jpg"},
 {card: "The Chariot",
 desc: "willpower",
-src: "https://upload.wikimedia.org/wikipedia/en/9/9b/RWS_Tarot_07_Chariot.jpg"},
+src: "https://live.staticflickr.com/65535/51704036307_13c5914e69_m.jpg"},
 {card: "Strength",
 desc: "compassion",
-src: "https://upload.wikimedia.org/wikipedia/en/f/f5/RWS_Tarot_08_Strength.jpg"},
+src: "https://live.staticflickr.com/65535/51705504464_ee964c3e2d_m.jpg"},
 {card: "The Hermit",
 desc: "contemplation",
-src: "https://upload.wikimedia.org/wikipedia/en/4/4d/RWS_Tarot_09_Hermit.jpg"},
+src: "https://live.staticflickr.com/65535/51704036357_fd365491a0_m.jpg"},
 {card: "Wheel of Fortune",
 desc: "karma",
-src: "https://upload.wikimedia.org/wikipedia/en/3/3c/RWS_Tarot_10_Wheel_of_Fortune.jpg"},
+src: "https://live.staticflickr.com/65535/51704035687_ea83f70fff_m.jpg"},
 {card: "Justice",
 desc: "fairness",
-src: "https://upload.wikimedia.org/wikipedia/en/e/e0/RWS_Tarot_11_Justice.jpg"},
-{card: "The Hanged Man",
+src: "https://live.staticflickr.com/65535/51704829371_cc7633bc36_m.jpg"},
+{card: "The Hanged One",
 desc: "sacrifice",
-src: "https://upload.wikimedia.org/wikipedia/en/2/2b/RWS_Tarot_12_Hanged_Man.jpg"},
+src: "https://live.staticflickr.com/65535/51705504584_c3491cf39f_m.jpg"},
 {card: "Death",
 desc: "changes",
-src: "https://upload.wikimedia.org/wikipedia/en/d/d7/RWS_Tarot_13_Death.jpg"},
+src: "https://live.staticflickr.com/65535/51704829286_a555799550_m.jpg"},
 {card: "Temperance",
 desc: "calmness",
-src: "https://upload.wikimedia.org/wikipedia/en/f/f8/RWS_Tarot_14_Temperance.jpg"},
+src: "https://live.staticflickr.com/65535/51705504509_8af52200fa_m.jpg"},
 {card: "The Devil",
 desc: "addiction",
-src: "https://upload.wikimedia.org/wikipedia/en/5/55/RWS_Tarot_15_Devil.jpg"},
+src: "https://live.staticflickr.com/65535/51705718775_aca4c960c3_m.jpg"},
 {card: "The Tower",
 desc: "revolution",
-src: "https://upload.wikimedia.org/wikipedia/en/5/53/RWS_Tarot_16_Tower.jpg"},
+src: "https://live.staticflickr.com/65535/51705718305_4c3155f536_m.jpg"},
 {card: "The Star",
 desc: "hope",
-src: "https://upload.wikimedia.org/wikipedia/en/d/db/RWS_Tarot_17_Star.jpg"},
+src: "https://live.staticflickr.com/65535/51705503954_13941fdeff_m.jpg"},
 {card: "The Moon",
 desc: "the unconscious",
-src: "https://upload.wikimedia.org/wikipedia/en/7/7f/RWS_Tarot_18_Moon.jpg"},
+src: "https://live.staticflickr.com/65535/51705718320_9f13e339c2_m.jpg"},
 {card: "The Sun",
 desc: "happiness",
-src: "https://upload.wikimedia.org/wikipedia/en/1/17/RWS_Tarot_19_Sun.jpg"},
+src: "https://live.staticflickr.com/65535/51705503939_fea4d50bc4_m.jpg"},
 {card: "Judgement",
 desc: "rebirth",
-src: "https://upload.wikimedia.org/wikipedia/en/d/dd/RWS_Tarot_20_Judgement.jpg"},
+src: "https://live.staticflickr.com/65535/51704036057_ecdfb85bd2_m.jpg"},
  {card: "The World",
 desc: "completion",
-src: "https://upload.wikimedia.org/wikipedia/en/f/ff/RWS_Tarot_21_World.jpg"},
+src: "https://live.staticflickr.com/65535/51704829131_cd40d613bb_m.jpg"},
   {card:"Ace of Wands",
   desc:"creativity",
-src:"https://upload.wikimedia.org/wikipedia/en/1/11/Wands01.jpg"},
+src:"https://live.staticflickr.com/65535/51704035932_213d468f39_m.jpg"},
   {card:"Two of Wands",
-  desc:"planning", src:"https://upload.wikimedia.org/wikipedia/en/0/0f/Wands02.jpg"},
+  desc:"planning", 
+  src:"https://live.staticflickr.com/65535/51705718230_5b08041e88_m.jpg"},
   {card:"Three of Wands",
- desc:"expansion", src:"https://upload.wikimedia.org/wikipedia/en/f/ff/Wands03.jpg"},
+ desc:"expansion", 
+ src:"https://live.staticflickr.com/65535/51705718255_a2e1d6206e_m.jpg"},
   {card:"Four of Wands",
-  desc:"celebration",  src:"https://upload.wikimedia.org/wikipedia/en/a/a4/Wands04.jpg"},
+  desc:"celebration",  src:"https://live.staticflickr.com/65535/51705504194_ae3df324c2_m.jpg"},
   {card:"Five of Wands",
-  desc:"conflict", src:"https://upload.wikimedia.org/wikipedia/en/9/9d/Wands05.jpg"},
+  desc:"conflict", 
+  src:"https://live.staticflickr.com/65535/51705718500_106396cca1_m.jpg"},
   {card:"Six of Wands",
-  desc:"victory", src:"https://upload.wikimedia.org/wikipedia/en/3/3b/Wands06.jpg"},
+  desc:"victory", 
+  src:"https://live.staticflickr.com/65535/51705504444_a3ca82d8d4_m.jpg"},
   {card:"Seven of Wands",
-  desc:"defense", src:"https://upload.wikimedia.org/wikipedia/en/e/e4/Wands07.jpg"},
+  desc:"defense", 
+  src:"https://live.staticflickr.com/65535/51705111583_66fc70903e_m.jpg"},
   {card:"Eight of Wands",
-  desc:"swift action", src:"https://upload.wikimedia.org/wikipedia/en/6/6b/Wands08.jpg"},
+  desc:"swift action", 
+  src:"https://live.staticflickr.com/65535/51704035992_4d197e4889_m.jpg"},
   {card:"Nine of Wands",
   desc:"hyper-awareness",
-src:"https://upload.wikimedia.org/wikipedia/en/e/e7/Wands09.jpg"},
+src:"https://live.staticflickr.com/65535/51705111513_eef360ba54_m.jpg"},
   {card:"Ten of Wands",
   desc:"burden",
-src:"https://upload.wikimedia.org/wikipedia/en/0/0b/Wands10.jpg"},
+src:"https://live.staticflickr.com/65535/51704036292_24cc59d62c_m.jpg"},
   {card:"Page of Wands",
-  desc:"curiosity",  src:"https://upload.wikimedia.org/wikipedia/en/6/6a/Wands11.jpg"},
+  desc:"curiosity",  
+  src:"https://live.staticflickr.com/65535/51704036147_e36857b693_m.jpg"},
   {card:"Knight of Wands",
-  desc:"adventure", src:"https://upload.wikimedia.org/wikipedia/en/1/16/Wands12.jpg"},
+  desc:"adventure", 
+  src:"https://live.staticflickr.com/65535/51704829396_aefd21087d_m.jpg"},
   {card:"Queen of Wands",
-  desc:"self-esteem", src:"https://upload.wikimedia.org/wikipedia/en/0/0d/Wands13.jpg"},
+  desc:"self-esteem", 
+  src:"https://live.staticflickr.com/65535/51705111543_1137140334_m.jpg"},
   {card:"King of Wands",
-  desc:"being a visionary", src:"https://upload.wikimedia.org/wikipedia/en/c/ce/Wands14.jpg"},
+  desc:"being a visionary", 
+  src:"https://live.staticflickr.com/65535/51705718550_68763984aa_m.jpg"},
   {card:"Ace of Swords",
-  desc:"Intellect", src:"https://upload.wikimedia.org/wikipedia/en/1/1a/Swords01.jpg"},
+  desc:"Intellect", 
+  src:"https://live.staticflickr.com/65535/51705504109_80442e44d2_m.jpg"},
   {card:"Two of Swords",
-  desc:"being in a stalemate", src:"https://upload.wikimedia.org/wikipedia/en/9/9e/Swords02.jpg"},
+  desc:"being in a stalemate", 
+  src:"https://live.staticflickr.com/65535/51704829106_229f6c7783_m.jpg"},
   {card:"Three of Swords",
-  desc:"heartache", src:"https://upload.wikimedia.org/wikipedia/en/0/02/Swords03.jpg"},
+  desc:"heartache", 
+  src:"https://live.staticflickr.com/65535/51705503879_22674cc860_m.jpg"},
   {card:"Four of Swords",
-  desc:"restoration", src:"https://upload.wikimedia.org/wikipedia/en/b/bf/Swords04.jpg"},
+  desc:"restoration", 
+  src:"https://live.staticflickr.com/65535/51705504184_76b41bdf0f_m.jpg"},
   {card:"Five of Swords",
-  desc:"competition", src:"https://upload.wikimedia.org/wikipedia/en/2/23/Swords05.jpg"},
+  desc:"competition", 
+  src:"https://live.staticflickr.com/65535/51705111388_c0cde07be9_m.jpg"},
   {card:"Six of Swords",
-  desc:"transition", src:"https://upload.wikimedia.org/wikipedia/en/2/29/Swords06.jpg"},
+  desc:"transition", 
+  src:"https://live.staticflickr.com/65535/51705111603_2f14f2c02e_m.jpg"},
   {card:"Seven of Swords",
-  desc:"deceit", src:"https://upload.wikimedia.org/wikipedia/en/3/34/Swords07.jpg"},
+  desc:"deceit", 
+  src:"https://live.staticflickr.com/65535/51705111578_9a70ca4da3_m.jpg"},
   {card:"Eight of Swords",
-  desc:"victimization", src:"https://upload.wikimedia.org/wikipedia/en/a/a7/Swords08.jpg"},
+  desc:"victimization", 
+  src:"https://live.staticflickr.com/65535/51704829321_8ea6722b30_m.jpg"},
   {card:"Nine of Swords",
-  desc:"worry", src:"https://upload.wikimedia.org/wikipedia/en/2/2f/Swords09.jpg"},
+  desc:"worry", 
+  src:"https://live.staticflickr.com/65535/51705504309_7aa9c5d2f8_m.jpg"},
   {card:"Ten of Swords",
-  desc:"deep wounds", src:"https://upload.wikimedia.org/wikipedia/en/d/d4/Swords10.jpg"},
+  desc:"deep wounds", 
+  src:"https://live.staticflickr.com/65535/51705718750_a3f9b62c0a_m.jpg"},
   {card:"Page of Swords",
-  desc:"new ideas", src:"https://upload.wikimedia.org/wikipedia/en/4/4c/Swords11.jpg"},
+  desc:"new ideas", 
+  src:"https://live.staticflickr.com/65535/51705718605_8a80cd0f5c_m.jpg"},
   {card:"Knight of Swords",
-  desc:"aggression", src:"https://upload.wikimedia.org/wikipedia/en/b/b0/Swords12.jpg"},
+  desc:"aggression", 
+  src:"https://live.staticflickr.com/65535/51705504269_224b936204_m.jpg"},
   {card:"Queen of Swords",
-  desc:"being analytical", src:"https://upload.wikimedia.org/wikipedia/en/d/d4/Swords13.jpg"},
+  desc:"being analytical", 
+  src:"https://live.staticflickr.com/65535/51705504349_749565dbbf_m.jpg"},
   {card:"King of Swords",
-  desc:"forthrightness", src:"https://upload.wikimedia.org/wikipedia/en/3/33/Swords14.jpg"},
+  desc:"forthrightness", 
+  src:"https://live.staticflickr.com/65535/51705504219_94b8203be1_m.jpg"},
   {card:"Ace of Pentacles",
-  desc:"opportunities", src:"https://upload.wikimedia.org/wikipedia/en/f/fd/Pents01.jpg"},
+  desc:"opportunities", 
+  src:"https://live.staticflickr.com/65535/51704035917_2776e1b281_m.jpg"},
   {card:"Two of Pentacles",
-  desc:"balancing", src:"https://upload.wikimedia.org/wikipedia/en/9/9f/Pents02.jpg"},
+  desc:"balancing", 
+  src:"https://live.staticflickr.com/65535/51704035727_36d2f7fca8_m.jpg"},
   {card:"Three of Pentacles",
-  desc:"teamwork", src:"https://upload.wikimedia.org/wikipedia/en/4/42/Pents03.jpg"},
+  desc:"teamwork", 
+  src:"https://live.staticflickr.com/65535/51705718275_ed25b64ac2_m.jpg"},
   {card:"Four of Pentacles",
-  desc:"resources", src:"https://upload.wikimedia.org/wikipedia/en/3/35/Pents04.jpg"},
+  desc:"resources", 
+  src:"https://live.staticflickr.com/65535/51704829346_5138167747_m.jpg"},
   {card:"Five of Pentacles",
-  desc:"struggle", src:"https://upload.wikimedia.org/wikipedia/en/9/96/Pents05.jpg"},
+  desc:"struggle", 
+  src:"https://live.staticflickr.com/65535/51704829331_a22f6515ae_m.jpg"},
   {card:"Six of Pentacles",
-  desc:"giving", src:"https://upload.wikimedia.org/wikipedia/en/a/a6/Pents06.jpg"},
+  desc:"giving", 
+  src:"https://live.staticflickr.com/65535/51705718690_db0626c135_m.jpg"},
   {card:"Seven of Pentacles",
-  desc:"waiting", src:"https://upload.wikimedia.org/wikipedia/en/6/6a/Pents07.jpg"},
+  desc:"waiting", 
+  src:"https://live.staticflickr.com/65535/51704036212_45e3f27173_m.jpg"},
   {card:"Eight of Pentacles",
-  desc:"hard work", src:"https://upload.wikimedia.org/wikipedia/en/4/49/Pents08.jpg"},
+  desc:"hard work", 
+  src:"https://live.staticflickr.com/65535/51704035977_f0dfd49217_m.jpg"},
   {card:"Nine of Pentacles",
-  desc:"comfort", src:"https://upload.wikimedia.org/wikipedia/en/f/f0/Pents09.jpg"},
+  desc:"comfort", 
+  src:"https://live.staticflickr.com/65535/51705504299_ecf0c97101_m.jpg"},
   {card:"Ten of Pentacles",
-  desc:"legacy", src:"https://upload.wikimedia.org/wikipedia/en/4/42/Pents10.jpg"},
+  desc:"legacy", 
+  src:"https://live.staticflickr.com/65535/51705111648_8eab97e49b_m.jpg"},
   {card:"Page of Pentacles",
-  desc:"being a beginner", src:"https://upload.wikimedia.org/wikipedia/en/e/ec/Pents11.jpg"},
+  desc:"being a beginner", 
+  src:"https://live.staticflickr.com/65535/51705504319_fcd611c08f_m.jpg"},
   {card:"Knight of Pentacles",
-  desc:"analytical thinking", src:"https://upload.wikimedia.org/wikipedia/en/d/d5/Pents12.jpg"},
+  desc:"analytical thinking", 
+  src:"https://live.staticflickr.com/65535/51705504254_4a54c1ac4c_m.jpg"},
   {card:"Queen of Pentacles",
-  desc:"abundance", src:"https://upload.wikimedia.org/wikipedia/en/8/88/Pents13.jpg"},
+  desc:"abundance", 
+  src:"https://live.staticflickr.com/65535/51704829456_ce38b11694_m.jpg"},
   {card:"King of Pentacles",
-  desc:"accumulation", src:"https://upload.wikimedia.org/wikipedia/en/1/1c/Pents14.jpg"},
+  desc:"accumulation", 
+  src:"https://live.staticflickr.com/65535/51704829381_f6e0922100_m.jpg"},
   {card:"Ace of Cups",
-  desc:"new love", src:"https://upload.wikimedia.org/wikipedia/en/3/36/Cups01.jpg"},
+  desc:"new love", 
+  src:"https://live.staticflickr.com/65535/51704829246_bb33865025_m.jpg"},
   {card:"Two of Cups",
-  desc:"relationships", src:"https://upload.wikimedia.org/wikipedia/en/f/f8/Cups02.jpg"},
+  desc:"relationships", 
+  src:"https://live.staticflickr.com/65535/51705718250_75691f35ab_m.jpg"},
   {card:"Three of Cups",
-  desc:"friendship", src:"https://upload.wikimedia.org/wikipedia/en/7/7a/Cups03.jpg"},
+  desc:"friendship", 
+  src:"https://live.staticflickr.com/65535/51704035767_1b86d8b770_m.jpg"},
   {card:"Four of Cups",
-  desc:"apathy", src:"https://upload.wikimedia.org/wikipedia/en/3/35/Cups04.jpg"},
+  desc:"apathy", 
+  src:"https://live.staticflickr.com/65535/51704829341_ef8d218475_m.jpg"},
   {card:"Five of Cups",
-  desc:"sadness", src:"https://upload.wikimedia.org/wikipedia/en/d/d7/Cups05.jpg"},
+  desc:"sadness", 
+  src:"https://live.staticflickr.com/65535/51704036007_025a9dbd19_m.jpg"},
   {card:"Six of Cups",
-  desc:"nostalgia", src:"https://upload.wikimedia.org/wikipedia/en/1/17/Cups06.jpg"},
+  desc:"nostalgia", 
+  src:"https://live.staticflickr.com/65535/51705718680_666e712557_m.jpg"},
   {card:"Seven of Cups",
-  desc:"delusions", src:"https://upload.wikimedia.org/wikipedia/en/a/ae/Cups07.jpg"},
+  desc:"delusions", 
+  src:"https://live.staticflickr.com/65535/51705718635_2b405bde9d_m.jpg"},
   {card:"Eight of Cups",
-  desc:"finished journeys", src:"https://upload.wikimedia.org/wikipedia/en/6/60/Cups08.jpg"},
+  desc:"finished journeys", 
+  src:"https://live.staticflickr.com/65535/51705111368_c3b17ab55d_m.jpg"},
   {card:"Nine of Cups",
-  desc:"wish fulfillment", src:"https://upload.wikimedia.org/wikipedia/en/2/24/Cups09.jpg"},
+  desc:"wish fulfillment", 
+  src:"https://live.staticflickr.com/65535/51705504289_9afea3af2c_m.jpg"},
   {card:"Ten of Cups",
-  desc:"community", src:"https://upload.wikimedia.org/wikipedia/en/8/84/Cups10.jpg"},
+  desc:"community", 
+  src:"https://live.staticflickr.com/65535/51705504514_d5c1da7294_m.jpg"},
   {card:"Page of Cups",
-  desc:"messages", src:"https://upload.wikimedia.org/wikipedia/en/a/ad/Cups11.jpg"},
+  desc:"messages", 
+  src:"https://live.staticflickr.com/65535/51704829436_11f1ac4805_m.jpg"},
   {card:"Knight of Cups",
-  desc:"carefulness", src:"https://upload.wikimedia.org/wikipedia/en/f/fa/Cups12.jpg"},
+  desc:"carefulness", 
+  src:"https://live.staticflickr.com/65535/51705111463_f3469aaff3_m.jpg"},
   {card:"Queen of Cups",
-  desc:"emotionality", src:"https://upload.wikimedia.org/wikipedia/en/6/62/Cups13.jpg"},
+  desc:"emotionality", 
+  src:"https://live.staticflickr.com/65535/51705718615_ae207bea48_m.jpg"},
   {card:"King of Cups",
-  desc:"benevolence", src:"https://upload.wikimedia.org/wikipedia/en/0/04/Cups14.jpg"}
+  desc:"benevolence", 
+  src:"https://live.staticflickr.com/65535/51705504214_a897149d38_m.jpg"}
 ];
 
 // The button function
@@ -308,7 +387,7 @@ footer {
 	width: 100%;
 	left: 0;
 	bottom: 0;
-	background-color: brown;
+	background-color: #49c6c1;
 	color: white;
 	text-align: center;
 }
@@ -320,17 +399,17 @@ footer {
 	width: 100%;
 	left: 0;
 	bottom: 0;
-	background-color: #49c6c1;
-	color: #dfcdcb;
+	background-color: #dd5e97;
+	color: #fadcd1;
 	text-align: center;
-    font-size: 14px
+    font-size: 12px
 }
 </style>
 
 <footer>
-        <p style="font-family: Helvetica">
+        <p style="font-family: Courier New">
         
-	<strong>&copy; 2021 Twitter.com/BttrflyMilkweed</strong> </p>
+	<strong>&copy; 2021 reddit.com/user/BttrflyMilkweed</strong> </p>
     
     
     
@@ -379,6 +458,5 @@ footer {
     }
   };
 </script>
-    </body> 
-    
-</html>
+    </div> 
+</body>
