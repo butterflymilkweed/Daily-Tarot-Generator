@@ -7,11 +7,21 @@ body {
   padding: 1em;
 }
 
+position: fixed;
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
   grid-gap: 10px;
+  
 }
 
 .item-a {
@@ -25,7 +35,7 @@ body {
   grid-row: 2 / 3;
   justify-self: center;
   text-align: center;
-  font: 12px Courier, sans-serif;
+  font: 12px, Helvetica;
 
 }
 
@@ -36,20 +46,23 @@ body {
 
 }
 
+
 button {
-  background-color: #F4DBED;
+    
+    
+  background-color:  #008197; 
   border: none;
   padding: 0.7em;
-  color: gray;
-  display: block;
-  font: 12px Courier, sans-serif;
+  color: #dfcdcb;
+  display: inline-block;
+  font: 12px Helvetica;
 
   -webkit-transition: 0.5s;
 
 }
 
 button:hover {
-  background-color: pink;   
+  background-color: #49c6c1;   
   -webkit-transition: 0.5s;
 
 }
@@ -73,16 +86,22 @@ button:hover {
 <div class="container">
 <div class="item-a">
   
-  <img id="face" src="https://media.giphy.com/media/lO8sVTtKic9rw12BQ3/giphy.gif">
+  <iframe src="https://giphy.com/embed/lO8sVTtKic9rw12BQ3" width="154.5" height="256.5" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
   
   </div>
   
 <div id="card" class="item-b">
   <p></p>
   </div>
+  
+  
 
+<div style="text-align:center">
+    <button style="height:40px; width:154.5px;"
  <button type="button" id="button" class="button" onclick="buttonClick()">   today's draw 	</button>
-
+<p></p>
+<div style="text-align:center">
+    <button style="height:40px; width:154.5px;"
   <button onclick=location.reload();
 >  reset deck &#x263e;	
 </button>
@@ -308,7 +327,7 @@ footer {
 	width: 100%;
 	left: 0;
 	bottom: 0;
-	background-color: brown;
+	background-color: #49c6c1;
 	color: white;
 	text-align: center;
 }
@@ -330,7 +349,7 @@ footer {
 <footer>
         <p style="font-family: Helvetica">
         
-	<strong>&copy; 2021 Twitter.com/BttrflyMilkweed</strong> </p>
+	<strong>&copy; 2021 reddit.com/user/BttrflyMilkweed</strong> </p>
     
     
     
